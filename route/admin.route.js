@@ -25,4 +25,16 @@ adrouter.post("/", async (req, res)=>{
 
 })
 
+
+adrouter.delete("/:id", async(req, res)=>{
+
+    const id=req.params; 
+
+    const data=await Job.findByIdAndDelete({_id:id.id})
+
+    res.send("Job is deleted")
+
+
+})
+
 module.exports={adrouter};

@@ -11,12 +11,17 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("welcome to home page");
 });
-
+//user router
  app.use("/user", userRoute);
- 
+ // admin router
  app.use("/admin", adrouter)
 
  
+
+
+
+
+
 
 app.listen(5000, async() => {
     try {

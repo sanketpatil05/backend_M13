@@ -29,6 +29,7 @@ const signup = async (req, res) => {
   });
 };
 
+// hashing password 
 const login = async (req, res) => {
   const data = req.body;
   const { email, password } = data;
